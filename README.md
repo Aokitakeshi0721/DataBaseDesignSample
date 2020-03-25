@@ -35,9 +35,8 @@ Things you may want to cover:
 |password|integer|null: false, pass.match(/[a-z\d]{8,}/i)| 
 
 ### Association
-- has_many :groups_users
+- has_many :groups, through: :groups_users
 - has_many :message
-
 
 ## groupsテーブル
 
@@ -46,7 +45,7 @@ Things you may want to cover:
 |group_name|text|null: false, |
 
 ### Association
-- has_many :groups_users
+- has_many :users, through: :groups_users
 - has_many :message
 
 
